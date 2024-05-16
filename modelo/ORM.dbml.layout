@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ORM">
+  <DataContextMoniker Name="/ORMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6dcbf42c-fa8d-4b39-b50d-0633df0e1977" absoluteBounds="0.75, 5.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ORMDataContext/Acudiente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dab16a31-1440-405b-8970-af824da2f63f" absoluteBounds="0.765, 5.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24f03e3f-359d-4ced-a2bc-a807e3bdb079" absoluteBounds="3.5, 1, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/ORMDataContext/Nino" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e25aabc-df8e-4217-bbf2-b6ede263ed3f" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24369941-b4de-42b1-be2d-21c6cd2d4b08" absoluteBounds="0.75, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ORMDataContext/Jardin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ecc0746-1619-4ecc-a72e-977fe2a9a4f5" absoluteBounds="0.765, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.45274983723958); (4.5 : 6.45274983723958); (4.5 : 3.92470540364583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMDataContext/Acudiente/Acudiente_Nino" />
+      <nodes>
+        <classShapeMoniker Id="6dcbf42c-fa8d-4b39-b50d-0633df0e1977" />
+        <classShapeMoniker Id="24f03e3f-359d-4ced-a2bc-a807e3bdb079" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.41429768880208); (3.5 : 2.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMDataContext/Jardin/Jardin_Nino" />
+      <nodes>
+        <classShapeMoniker Id="24369941-b4de-42b1-be2d-21c6cd2d4b08" />
+        <classShapeMoniker Id="24f03e3f-359d-4ced-a2bc-a807e3bdb079" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

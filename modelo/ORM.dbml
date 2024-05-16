@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bdprueba" Class="ORMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Acudiente" Member="Acudiente">
+    <Type Name="Acudiente">
+      <Column Name="idAcudiente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cedula" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="celular" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Acudiente_Nino" Member="Nino" ThisKey="idAcudiente" OtherKey="idAcudiente" Type="Nino" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nino" Member="Nino">
+    <Type Name="Nino">
+      <Column Name="idNino" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NIUP" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tipoSangre" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ciudadNacimiento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="eps" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idAcudiente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idJardin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Acudiente_Nino" Member="Acudiente" ThisKey="idAcudiente" OtherKey="idAcudiente" Type="Acudiente" IsForeignKey="true" />
+      <Association Name="Jardin_Nino" Member="Jardin" ThisKey="idJardin" OtherKey="idJardin" Type="Jardin" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jardin" Member="Jardin">
+    <Type Name="Jardin">
+      <Column Name="idJardin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Jardin_Nino" Member="Nino" ThisKey="idJardin" OtherKey="idJardin" Type="Nino" />
+    </Type>
+  </Table>
+</Database>
